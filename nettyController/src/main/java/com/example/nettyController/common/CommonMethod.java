@@ -19,7 +19,8 @@ public class CommonMethod {
 		ByteBuf message = (ByteBuf) msg;
     		try {
 			builder.append(message.toString(StandardCharsets.UTF_8));
-    		} finally {
+    		}
+		finally {
 			message.release();
     		}
 	}
