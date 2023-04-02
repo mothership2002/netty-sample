@@ -17,10 +17,10 @@ public class CommonMethod {
 	
 	public static void releaseByteBuf(Object msg, StringBuilder builder) {
 		ByteBuf message = (ByteBuf) msg;
-	    try {
-	        builder.append(message.toString(StandardCharsets.UTF_8));
-	    } finally {
-	        message.release();
-	    }
+    		try {
+			builder.append(message.toString(StandardCharsets.UTF_8));
+    		} finally {
+			message.release();
+    		}
 	}
 }
